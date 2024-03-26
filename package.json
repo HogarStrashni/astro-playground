@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "astro-playground",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -7,11 +7,22 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "format": "prettier --write . --plugin=prettier-plugin-astro"
   },
   "dependencies": {
-    "astro": "^4.5.9",
     "@astrojs/check": "^0.5.10",
+    "@astrojs/tailwind": "^5.1.0",
+    "astro": "^4.5.9",
     "typescript": "^5.4.3"
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "^7.4.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-astro": "^0.33.1",
+    "prettier": "^3.2.5",
+    "prettier-config-standard": "^7.0.0",
+    "prettier-plugin-astro": "^0.13.0",
+    "prettier-plugin-tailwindcss": "^0.5.12"
   }
 }
