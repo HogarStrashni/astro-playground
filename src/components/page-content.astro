@@ -1,0 +1,19 @@
+---
+import MainLayout from "../layouts/main-layout.astro";
+import Typography from "../components/typography.astro";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<MainLayout {title}>
+  <Typography tag="h1" class="m-8 text-center text-6xl">
+    <slot name="title" />
+  </Typography>
+  <Typography tag="p" class="m-8 text-center italic">
+    <slot />
+  </Typography>
+</MainLayout>
