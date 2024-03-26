@@ -1,0 +1,13 @@
+---
+import { cn } from "../lib/utils/tailwind";
+
+interface Props {
+  class?: string | null | undefined;
+}
+
+const { class: className } = Astro.props;
+---
+
+<main class={cn("flex-1", className)}>
+  <slot />
+</main>

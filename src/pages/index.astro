@@ -1,19 +1,11 @@
 ---
-
+import MainLayout from "../layouts/main-layout.astro";
+import Typography from "../components/typography.astro";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body class="p-12">
-    <h1 class="m-8 text-center text-6xl">Astro</h1>
-    <p class="m-8 text-center italic">
-      Welcome to <span class="text-3xl">Astro</span>
-    </p>
-  </body>
-</html>
+<MainLayout title="Home page">
+  <Typography tag="h1" class="m-8 text-center text-6xl">Home page</Typography>
+  <Typography tag="p" class="m-8 text-center italic">
+    Welcome to <span class="text-2xl">Astro-playground: home page</span>
+  </Typography>
+</MainLayout>

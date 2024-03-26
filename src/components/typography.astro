@@ -1,0 +1,12 @@
+---
+interface Props {
+  class: string | null | undefined;
+  tag: keyof HTMLElementTagNameMap;
+}
+
+const { tag: Element, class: className } = Astro.props;
+---
+
+<Element class={className}>
+  <slot />
+</Element>
