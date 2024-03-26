@@ -1,8 +1,12 @@
 ---
 import PageContent from "../components/page-content.astro";
+import Typography from "../components/typography.astro";
 ---
 
 <PageContent title="About Page">
   <Fragment slot="title">About page</Fragment>
-  Welcome to <span class="sm:text-2xl">Astro-playground: About page</span>
+  Welcome to
+  <Typography tag="span" class="sm:text-2xl">
+    Astro-playground: About page
+  </Typography>
 </PageContent>
