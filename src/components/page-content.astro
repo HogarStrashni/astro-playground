@@ -9,11 +9,11 @@ interface Props {
 const { title } = Astro.props;
 ---
 
-<MainLayout {title}>
-  <Typography tag="h1" class="m-8 text-center text-6xl">
+<MainLayout {title} class="space-y-8">
+  <Typography tag="h1" class="text-center text-2xl sm:text-6xl">
     <slot name="title" />
   </Typography>
-  <Typography tag="p" class="m-8 text-center italic">
+  <Typography tag="p" class="text-center italic">
     <slot />
   </Typography>
 </MainLayout>
