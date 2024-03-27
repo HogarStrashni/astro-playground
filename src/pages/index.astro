@@ -3,9 +3,13 @@ import PageContent from "../components/page-content.astro";
 import Typography from "../components/typography.astro";
 ---
 
+<script is:inline data-astro-rerun>
+  console.log("home");
+</script>
+
 <PageContent title="Home Page">
   <Fragment slot="title">Home page</Fragment>
-  Welcome to
+  <span transition:animate="slide"> Welcome to </span>
   <Typography tag="span" class="sm:text-2xl">
     Astro-playground: Home page
   </Typography>
