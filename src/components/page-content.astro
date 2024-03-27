@@ -14,6 +14,7 @@ const { title } = Astro.props;
     <slot name="title" />
   </Typography>
   <Typography tag="p" class="text-center italic">
-    <slot />
+    <slot name="content" />
   </Typography>
+  <slot />
 </MainLayout>
