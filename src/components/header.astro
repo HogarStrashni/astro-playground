@@ -1,18 +1,30 @@
 ---
 import Typography from "./typography.astro";
+import Underline from "./underline.astro";
+
+const navLinks = [
+  { title: "Home", href: "/" },
+  { title: "About", href: "/about" },
+  { title: "Contact", href: "/contact" },
+  { title: "Empty", href: "/empty" },
+];
 ---
 
 <header class="flex h-16 items-center justify-between border-b px-4 sm:h-20">
-  <nav class="space-x-4 sm:space-x-12">
-    <a href="/">
-      <Typography tag="span" class="sm:text-xl">Home</Typography>
-    </a>
-    <a href="/about">
-      <Typography tag="span" class="sm:text-xl">About</Typography>
-    </a>
-    <a href="/contact">
-      <Typography tag="span" class="sm:text-xl">Contact</Typography>
-    </a>
+  <nav class="flex space-x-4 sm:space-x-12">
+    {
+      navLinks.map((navLink) => {
+        const { title, href } = navLink;
+        return (
+          <a {href} class="mt-1">
+            <Typography tag="span" class="sm:text-xl">
+              {title}
+            </Typography>
+            <Underline {href} />
+          </a>
+        );
+      })
+    }
   </nav>
-  <div class="text-sm italic sm:text-xl">ASTRO-PLAYGROUND</div>
+  <p class="hidden text-sm italic md:block md:text-xl">ASTRO-PLAYGROUND</p>
 </header>

@@ -1,5 +1,5 @@
 ---
-import { fade, slide } from "astro:transitions";
+import { slide } from "astro:transitions";
 import PageContent from "../components/page-content.astro";
 import Typography from "../components/typography.astro";
 ---
@@ -11,10 +11,10 @@ import Typography from "../components/typography.astro";
 <PageContent title="About Page">
   <Fragment slot="title">About page</Fragment>
   <Fragment slot="content">
-    <span transition:animate={slide({ duration: "1s" })}> Welcome to </span>
+    <span transition:animate={slide({ duration: "0.5s" })}> Welcome to </span>
     <Typography tag="span" class="sm:text-2xl">
       Astro-playground: About page
     </Typography>
   </Fragment>
-  <div class="size-20 bg-slate-700" transition:name="square"></div>
+  <div class="ml-auto size-20 bg-slate-700" transition:name="square"></div>
 </PageContent>

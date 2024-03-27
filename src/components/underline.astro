@@ -1,0 +1,19 @@
+---
+// define underline component playing with view transition
+
+interface Props {
+  href?: string;
+}
+
+const { href } = Astro.props;
+const { pathname } = Astro.url;
+---
+
+{
+  pathname === href && (
+    <div
+      class="mt-0.5 border-b-[3px] border-blue-700"
+      transition:name="underline"
+    />
+  )
+}
