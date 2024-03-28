@@ -7,11 +7,11 @@ interface Props {
 }
 
 const { post } = Astro.props;
-const { title, body, author } = post;
+const { id, title, body, author } = post;
 ---
 
-<div class="space-y-2 rounded-md border p-2">
-  <Typography tag="h1" class="line-clamp-1 text-sm italic">{title}</Typography>
+<a href=`/posts/${id}/` class="space-y-2 rounded-md border p-2">
+  <Typography tag="h2" class="line-clamp-1 text-sm italic">{title}</Typography>
   <Typography tag="p" class="text-xs">{author}</Typography>
   <Typography tag="p" class="line-clamp-2 text-xs">{body}</Typography>
-</div>
+</a>

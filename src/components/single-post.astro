@@ -1,0 +1,25 @@
+---
+import Typography from "@components/typography.astro";
+import type { PostWithAuthor } from "@/lib/data/queries";
+
+interface Props {
+  post: PostWithAuthor;
+}
+const { post } = Astro.props;
+const { id, title, body, author } = post;
+---
+
+<Typography tag="h1" class="sm:text-xl">Post #{id}</Typography>
+<Typography
+  tag="h2"
+  class="my-4 text-center font-bold italic sm:my-6 sm:text-2xl lg:text-3xl"
+>
+  {title}
+</Typography>
+<Typography tag="p" class="text-sm sm:text-base">{author}</Typography>
+<Typography
+  tag="p"
+  class="mt-12 max-w-screen-md text-center text-sm sm:text-base lg:text-xl"
+>
+  {body}
+</Typography>
