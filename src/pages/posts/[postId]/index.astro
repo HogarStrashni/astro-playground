@@ -3,6 +3,7 @@ import type { GetStaticPaths } from "astro";
 import MainLayout from "@/layouts/main-layout.astro";
 import { getPostsWithAuthor } from "@/lib/data/queries";
 import SinglePost from "@/components/single-post.astro";
+import { Icon } from "astro-icon/components";
 
 export const getStaticPaths = (async () => {
   const data = await getPostsWithAuthor();
@@ -16,7 +17,13 @@ const { post } = Astro.props;
 ---
 
 <MainLayout title="Posts" class="my-10 justify-start">
-  <a href="/posts/" class="rounded-md border px-5 py-2"> Back to all Posts </a>
+  <a
+    href="/posts/"
+    class="flex items-center space-x-2 rounded-md border px-5 py-2 shadow-sm"
+  >
+    <Icon name="arrow-left" />
+    <span>Back to all Posts</span>
+  </a>
   <div class="flex h-full w-full flex-col items-center justify-center">
     <SinglePost {post} />
   </div>
