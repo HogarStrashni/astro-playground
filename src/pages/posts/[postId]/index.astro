@@ -16,7 +16,7 @@ export const getStaticPaths = (async () => {
 const { post } = Astro.props;
 ---
 
-<MainLayout title="Posts" class="my-10 justify-start">
+<MainLayout title=`Post #${post.id}` class="my-10 justify-start">
   <a
     href="/posts/"
     class="flex items-center space-x-2 rounded-md border px-5 py-2 shadow-sm"

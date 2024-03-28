@@ -12,7 +12,7 @@ interface Props {
 const { title, class: className } = Astro.props;
 ---
 
-<html lang="en" class="h-full overflow-auto">
+<html lang="en" class="h-screen">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -25,9 +25,11 @@ const { title, class: className } = Astro.props;
     <title>{title}</title>
     <ViewTransitions />
   </head>
-  <body class="flex h-full flex-col overflow-auto px-4">
+  <body class="flex h-full flex-col px-4">
     <Header />
-    <Main class={cn("flex flex-col items-center justify-center", className)}>
+    <Main
+      class={cn("flex flex-col items-center justify-center pb-10", className)}
+    >
       <slot />
     </Main>
   </body>
