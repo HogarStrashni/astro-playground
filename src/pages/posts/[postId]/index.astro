@@ -24,7 +24,12 @@ const { post } = Astro.props;
     <Icon name="arrow-left" />
     <span>Back to all Posts</span>
   </a>
-  <div class="flex h-full w-full flex-col items-center justify-center">
-    <SinglePost {post} />
+  <div class="flex h-full w-full items-center justify-center">
+    <div
+      class="flex w-fit flex-col items-center"
+      transition:name=`post-${post.id}`
+    >
+      <SinglePost {post} />
+    </div>
   </div>
 </MainLayout>
