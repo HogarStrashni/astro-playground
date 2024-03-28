@@ -1,0 +1,15 @@
+---
+import MainLayout from "@/layouts/main-layout.astro";
+import PostCard from "@/components/post-card.astro";
+import Typography from "@/components/typography.astro";
+import { type PostWithAuthor, getPostsWithAuthor } from "@lib/data/queries";
+
+const postsWithAuthor = await getPostsWithAuthor();
+---
+
+<MainLayout title="Posts" class="mb-10 items-start justify-start px-4">
+  <Typography tag="h1" class="my-4 sm:my-6 sm:text-xl">All posts</Typography>
+  <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+    {postsWithAuthor.map((post: PostWithAuthor) => <PostCard {post} />)}
+  </div>
+</MainLayout>
