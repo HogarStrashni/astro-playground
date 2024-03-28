@@ -1,0 +1,21 @@
+---
+import { type PostWithAuthor } from "@lib/data/queries";
+import Typography from "./typography.astro";
+
+interface Props {
+  post: PostWithAuthor;
+}
+
+const { post } = Astro.props;
+const { id, title, body, author } = post;
+---
+
+<a
+  href=`/posts/${id}/`
+  class="space-y-2 rounded-md border p-2"
+  transition:name=`post-${id}`
+>
+  <Typography tag="h2" class="line-clamp-1 text-sm italic">{title}</Typography>
+  <Typography tag="p" class="text-xs">{author}</Typography>
+  <Typography tag="p" class="line-clamp-2 text-xs">{body}</Typography>
+</a>

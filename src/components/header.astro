@@ -1,16 +1,12 @@
 ---
 import Typography from "@components/typography.astro";
 import Underline from "@components/underline.astro";
-
-const navLinks = [
-  { title: "Home", href: "/" },
-  { title: "About", href: "/about/" },
-  { title: "Contact", href: "/contact/" },
-  { title: "Empty", href: "/empty/" },
-];
+import { navLinks } from "@/lib/data/navigation-links";
 ---
 
-<header class="flex h-16 items-center justify-between border-b px-4 sm:h-20">
+<header
+  class="flex h-16 min-h-16 items-center justify-between border-b px-4 sm:h-20 sm:min-h-20"
+>
   <nav class="flex space-x-4 sm:space-x-12">
     {
       navLinks.map((navLink) => {

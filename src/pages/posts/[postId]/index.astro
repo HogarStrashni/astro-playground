@@ -1,0 +1,35 @@
+---
+import type { GetStaticPaths } from "astro";
+import MainLayout from "@/layouts/main-layout.astro";
+import { getPostsWithAuthor } from "@/lib/data/queries";
+import SinglePost from "@/components/single-post.astro";
+import { Icon } from "astro-icon/components";
+
+export const getStaticPaths = (async () => {
+  const data = await getPostsWithAuthor();
+  return data.map((post) => ({
+    params: { postId: post.id },
+    props: { post },
+  }));
+}) satisfies GetStaticPaths;
+
+const { post } = Astro.props;
+---
+
+<MainLayout title="Posts" class="my-10 justify-start">
+  <a
+    href="/posts/"
+    class="flex items-center space-x-2 rounded-md border px-5 py-2 shadow-sm"
+  >
+    <Icon name="arrow-left" />
+    <span>Back to all Posts</span>
+  </a>
+  <div class="flex h-full w-full items-center justify-center">
+    <div
+      class="flex w-fit flex-col items-center"
+      transition:name=`post-${post.id}`
+    >
+      <SinglePost {post} />
+    </div>
+  </div>
+</MainLayout>

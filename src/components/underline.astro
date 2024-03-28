@@ -7,10 +7,15 @@ interface Props {
 
 const { href } = Astro.props;
 const { pathname } = Astro.url;
+
+const showUnderline = () => {
+  if (href === "/posts/") return pathname.startsWith("/posts/");
+  return pathname === href;
+};
 ---
 
 {
-  pathname === href && (
+  showUnderline() && (
     <div
       class="mt-0.5 border-b-[3px] border-blue-700"
       transition:name="underline"
