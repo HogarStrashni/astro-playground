@@ -1,14 +1,7 @@
 ---
 import Typography from "@components/typography.astro";
 import Underline from "@components/underline.astro";
-
-const navLinks = [
-  { title: "Home", href: "/" },
-  { title: "About", href: "/about/" },
-  { title: "Contact", href: "/contact/" },
-  { title: "Empty", href: "/empty/" },
-  { title: "Posts", href: "/posts/" },
-];
+import { navLinks } from "@/lib/data/navigation-links";
 ---
 
 <header
