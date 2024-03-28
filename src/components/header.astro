@@ -7,10 +7,13 @@ const navLinks = [
   { title: "About", href: "/about/" },
   { title: "Contact", href: "/contact/" },
   { title: "Empty", href: "/empty/" },
+  { title: "Posts", href: "/posts/" },
 ];
 ---
 
-<header class="flex h-16 items-center justify-between border-b px-4 sm:h-20">
+<header
+  class="flex h-16 min-h-16 items-center justify-between border-b px-4 sm:h-20 sm:min-h-20"
+>
   <nav class="flex space-x-4 sm:space-x-12">
     {
       navLinks.map((navLink) => {
