@@ -1,7 +1,7 @@
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
-    "baseUrl": "C:/Users/Djordje/Desktop/astro-playground",
+    "baseUrl": ".",
     "paths": {
       "@/*": [
         "src/*"
