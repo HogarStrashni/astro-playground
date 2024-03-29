@@ -2,7 +2,7 @@
 import type { GetStaticPaths } from "astro";
 import MainLayout from "@/layouts/main-layout.astro";
 import { getPostsWithAuthor } from "@/lib/data/queries";
-import SinglePost from "@/components/single-post.astro";
+import SinglePost from "@components/single-post.astro";
 import { Icon } from "astro-icon/components";
 
 export const getStaticPaths = (async () => {
