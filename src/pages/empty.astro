@@ -1,8 +1,14 @@
 ---
+import HoverButton from "@/components/hover-button.astro";
 import PageContent from "@components/page-content.astro";
 ---
 
 <PageContent title="Empty Page">
   <Fragment slot="title">Empty page</Fragment>
-  <div class="size-56 bg-slate-700" transition:name="square"></div>
+  <div
+    class="flex size-56 items-center justify-center bg-slate-700"
+    transition:name="square"
+  >
+    <HoverButton />
+  </div>
 </PageContent>
