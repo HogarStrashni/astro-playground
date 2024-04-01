@@ -6,13 +6,13 @@ import { Icon } from "astro-icon/components";
   <span
     class="mr-12 overflow-clip bg-gradient-to-r from-white from-50% to-slate-700 to-50% bg-[length:200%_100%] bg-clip-text bg-[left] font-bold text-transparent delay-75 duration-[0.25s] group-hover:bg-[right]"
   >
-    Hello World
+    <slot />
   </span>
   <span class="relative">
     <Icon name="arrow-right" class="absolute right-3 top-1 text-slate-700" />
   </span>
   <div
-    class="absolute inset-1 -z-10 flex justify-end overflow-hidden rounded-full duration-200 group-hover:inset-0 group-hover:delay-100"
+    class="absolute inset-1 -z-10 flex justify-end overflow-hidden rounded-full delay-0 duration-200 group-hover:inset-0 group-hover:delay-100"
   >
     <span class="h-full w-4 rounded-l-full bg-green-500"></span>
     <span class="h-full w-0 bg-green-500 duration-500 group-hover:w-full"

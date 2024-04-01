@@ -1,16 +1,27 @@
 ---
 import HoverButton from "@/components/hover-button.astro";
 import HoverButtonReact from "@/components/islands/hover-button-r";
+import HoverButtonReactScale from "@/components/islands/hover-button-r-scale";
 import PageContent from "@components/page-content.astro";
 ---
 
 <PageContent title="Empty Page">
   <Fragment slot="title">Empty page</Fragment>
   <div
-    class="flex flex-col gap-4 size-56 items-center justify-center bg-slate-700"
+    class="flex size-56 flex-col items-center justify-center gap-4 bg-slate-700"
     transition:name="square"
   >
-    <HoverButton />
-    <HoverButtonReact />
+    <div class="flex flex-col items-center">
+      <span class="text-xs text-gray-400">astro component</span>
+      <HoverButton>Hello World</HoverButton>
+    </div>
+    <div class="flex flex-col items-center">
+      <span class="text-xs text-gray-400">react component - translate</span>
+      <HoverButtonReact>Hello World</HoverButtonReact>
+    </div>
+    <div class="flex flex-col items-center">
+      <span class="text-xs text-gray-400">react component - scale</span>
+      <HoverButtonReactScale>Hello World</HoverButtonReactScale>
+    </div>
   </div>
 </PageContent>
