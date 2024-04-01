@@ -9,7 +9,7 @@ const HoverButtonReact = () => {
       <span className="relative">
         <ArrowRight className="absolute right-3 top-1 h-4 w-4 text-slate-700" />
       </span>
-      <div className="absolute inset-1 -z-10 flex justify-end overflow-hidden rounded-full duration-200 group-hover:inset-0 group-hover:delay-100">
+      <div className="absolute inset-1 -z-10 flex justify-end overflow-hidden rounded-full delay-0 duration-200 group-hover:inset-0 group-hover:delay-100">
         <span className="h-full w-4 rounded-l-full bg-green-500"></span>
         <span className="h-full w-0 bg-green-500 duration-500 group-hover:w-full"></span>
         <span className="h-full w-4 rounded-r-full bg-green-500"></span>
