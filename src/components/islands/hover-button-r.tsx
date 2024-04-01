@@ -11,9 +11,9 @@ const HoverButtonReact = ({ children }: PropsWithChildren) => {
         <ArrowRight className="absolute right-3 top-1 h-4 w-4 text-slate-700" />
       </span>
       <div className="absolute inset-0 -z-10 flex justify-end rounded-full">
-        <span className="relative right-1 top-1 h-8 w-4 rounded-l-full bg-green-500 delay-[0.45s] duration-150 group-hover:right-0 group-hover:top-0 group-hover:h-10 group-hover:w-5 group-hover:delay-0 group-hover:duration-75"></span>
+        <span className="relative right-1 top-1 h-8 w-4 rounded-l-full bg-green-500 delay-500 duration-150 group-hover:right-0 group-hover:top-0 group-hover:h-10 group-hover:w-5 group-hover:delay-0 group-hover:duration-75"></span>
         <span className="h-10 w-0 bg-green-500 duration-500 group-hover:w-full group-hover:delay-75"></span>
-        <span className="relative right-1 top-1 h-8 w-4 rounded-r-full bg-green-500 delay-[0.45s] duration-150 group-hover:right-0 group-hover:top-0 group-hover:h-10 group-hover:w-5 group-hover:delay-0 group-hover:duration-75"></span>
+        <span className="relative right-1 top-1 h-8 w-4 rounded-r-full bg-green-500 delay-500 duration-150 group-hover:right-0 group-hover:top-0 group-hover:h-10 group-hover:w-5 group-hover:delay-0 group-hover:duration-75"></span>
       </div>
     </button>
   );
