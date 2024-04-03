@@ -11,9 +11,14 @@ export default {
           "75%": { transform: "scale(1.10) rotate(-10deg)" },
           "100%": { transform: "scale(1) rotate(10deg)" },
         },
+        dash: {
+          from: { offsetDistance: "0%" },
+          to: { offsetDistance: "100%" },
+        },
       },
       animation: {
         "svg-playground": "playground 6s linear infinite",
+        "svg-dash": "dash 2s linear alternate infinite",
       },
     },
   },
