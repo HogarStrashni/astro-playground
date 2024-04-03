@@ -13,10 +13,23 @@ import HoverButton from "@/components/islands/hover-button";
   </div>
 </PageContent>
 
-<div class="absolute left-96 top-80 w-96 rotate-45 bg-black">
+<div class="absolute left-96 top-80 w-96 rotate-45 overflow-hidden bg-black">
   <img
     src="/blur-effect.svg"
     alt="svg with blur"
     class="animate-svg-playground"
   />
 </div>
+
+<div class="mx-20 h-96 w-96">
+  <div id="animSvg" class="h-4 w-4 animate-svg-dash rounded-full bg-blue-500">
+  </div>
+  <img src="/test.svg" alt="svg path" />
+</div>
+
+<style>
+  #animSvg {
+    offset-path: path("M10 80 Q 77.5 10, 145 80 T 280 80");
+    offset-distance: 0%;
+  }
+</style>
