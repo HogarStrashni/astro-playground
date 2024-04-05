@@ -22,13 +22,47 @@ import HoverButton from "@/components/islands/hover-button";
 </div>
 
 <div class="absolute bottom-0">
-  <div id="animSvg" class="h-4 w-4 animate-svg-dash rounded-full bg-blue-500">
-  </div>
-  <img src="/test.svg" alt="svg path" width="300" height="200" />
+  <svg
+    width="400"
+    height="400"
+    viewBox="-5 -5 400 400"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <defs>
+      <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#f00"></stop>
+        <stop offset="100%" stop-color="#00f"></stop>
+      </linearGradient>
+    </defs>
+    <path
+      id="path"
+      opacity="0.7"
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      stroke="url(#gradient)"
+      stroke-width="6"
+      d="M 120 240 L 300 30 L 390 0 L 360 90 L 150 270 C 180 300 180 330 210 300 C 210 330 240 360 210 360 A 42.6 42.6 90 0 1 180 390 A 150 150 90 0 0 120 300 Q 105 297 105 315 T 60 354 T 36 330 T 75 285 T 90 270 A 150 150 90 0 0 0 210 A 42.6 42.6 90 0 1 30 180 C 30 150 60 180 90 180 C 60 210 90 210 120 240 M 300 30 L 300 90 L 360 90 L 306 84 L 300 30"
+      fill="none"></path>
+  </svg>
 </div>
 
 <style>
-  #animSvg {
-    offset-path: path("M10 80 Q 77.5 10, 145 80 T 280 80");
+  #path {
+    animation: animateDash 4s linear forwards infinite;
+  }
+
+  @keyframes animateDash {
+    to {
+      stroke-dashoffset: 0;
+    }
   }
 </style>
+
+<script>
+  const path = document.querySelector("#path") as SVGPathElement;
+  const pathLength = path.getTotalLength();
+
+  path.style.strokeDasharray = pathLength.toString();
+  path.style.strokeDashoffset = pathLength.toString();
+</script>
